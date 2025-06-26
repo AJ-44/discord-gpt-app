@@ -9,6 +9,7 @@ to any text channel you wish to use it in with the correct permissions.
 see:
 https://support.discord.com/hc/en-us/articles/204849977-How-do-I-create-a-server
 https://discord.com/developers/docs/quick-start/getting-started
+https://www.ionos.co.uk/digitalguide/server/know-how/creating-discord-bot/
 
 2-create an account on open ai and generate your api keys and permissions
 to allow the right models on the open ai dashboard. Models set to use
@@ -16,9 +17,9 @@ on this bot are gpt4o-mini and dalle3. you will also need credit on the account.
 see: https://platform.openai.com/api-keys
 
  ------------------------------
-tokens & api keys:
-Once you have the app added to your server and setup an api then you
-can add your discord app token number and openai api key to your .env file.
+tokens, ids & api keys:
+Once you have the app added to your server and setup an api with a key then you
+can add your client id, guild id, discord app token number and openai api key to your .env file.
 This is a text file that stores environment variables and
 configuration settings seperately and keeps it private. This stops it 
 from being hardcoded in the source code and maintains security.
