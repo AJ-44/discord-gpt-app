@@ -32,8 +32,8 @@ premade commands are /imagine for image creation in dalle3.
 npm dependencies:
 Whether you are running the app locally or on a cloud server for 
 persistance, you will need to have the dependent packages installed 
-in the same folder as your bot.js using npm install (node.js,openai,discord.js,
-natural). Start the bot.js file with the command: node bot.js and 
+in the same folder as your bot.js using npm install (node.js,openai,discord.js). 
+Start the bot.js file with the command: node bot.js and 
 it will then be shown as online on discord.
 
 persistance: 
