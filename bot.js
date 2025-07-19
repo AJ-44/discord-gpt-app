@@ -40,13 +40,6 @@ for (const file of commandFiles) {
 const messageHistory = {};
 const maxHistoryLength = 40
 
-// nlp to summarise & trim messages
-const natural = require('natural');
-const sentiment = new natural.SentimentAnalyzer('English', natural.PorterStemmer, 'afinn');
-async function summarizeText(text) {
-    return text.trim();
-  }
-
 // message creation
 client.on('messageCreate', async msg => {
     if (msg.author.bot) return;
@@ -78,7 +71,7 @@ messageHistory[userid].messages.push({ role: 'user', content: msg.content });
 const messages = [
 {
 role: 'system',
-content: 'you are a helpful assistant that provides short, clear, factual and concise answers, you always remove spaces between listed items. you always keep responses summarised with no space padding.',
+content: 'you are a helpful assistant that provides clear, factual and concise answers. You always keep responses summarised with no space padding',
 },
 ...messageHistory[userid].messages,
 ];
@@ -94,9 +87,6 @@ presence_penalty: 0.2,
 });
 
 let botreply = completion.choices[0].message.content;
-
- // trim the reply with the nlp
- botreply = await summarizeText(botreply);
 
  // sendmessage to user
  const maxLength = 2000; //max gpt message length & chunking enabled
